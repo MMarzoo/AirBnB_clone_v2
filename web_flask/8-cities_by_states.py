@@ -3,7 +3,7 @@
 starts a Flask web applicationstart Flask application"""
 
 from flask import Flask, render_template
-from models import *
+from models import models
 from models import storage
 app = Flask(__name__)
 
