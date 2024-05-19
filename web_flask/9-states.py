@@ -13,9 +13,9 @@ app = Flask(__name__)
 @app.route('/states/<state_id>', strict_slashes=False)
 def states(state_id=None):
     """display the states and cities listed in alphabetical order"""
-    states = storage.all("States")
+    states = storage.all("State")
     if state_id is not None:
-        state_id = 'State' + state_id
+        state_id = 'State.' + state_id
     return render_template('9-states.html', states=states, state_id=state_id)
 
 
